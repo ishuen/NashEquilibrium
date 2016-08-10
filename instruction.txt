@@ -1,0 +1,14 @@
+*******************************************************************
+*                                                                 *
+* Nash Equilibrium for Simultaneous Move and Complete Information *
+*                                                                 *
+*******************************************************************
+
+Input (a) matrix
+          for example:
+	  <INPUT>
+	  (2,3), (-1,5)
+	  (3,2), (1,1)
+
+Input (b) read file
+          <READ> fileName.txt
