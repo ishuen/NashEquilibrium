@@ -7,8 +7,14 @@ while(<$ins>){
 }
 chomp (my $input =<>);
 if($input =~ /<INPUT>/){
-	print "matrix";
-	
+	print "matrix\n";
+	$input = <>;
+	my $count = () = $input =~ /\(*\)/g;
+	print $count."\n"; #matrix size
+	#create matrix and store first line value
+	for( my $i = 1; $i < $count; $i++){
+		# the next n-1 lines
+	}
 }
 elsif($input =~ m/<READ>\s*(\w+.txt)/){
 	#print $1."\n";
