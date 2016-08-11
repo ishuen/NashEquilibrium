@@ -8,24 +8,17 @@ while(<$ins>){
 chomp (my $input =<>);
 my (@temp, $count);
 if($input =~ /<INPUT>/){
-	#print "matrix\n";
 	$input = <>;
 	@temp = $input =~ /(-?\d+)/g;
 	$count = @temp/2;
-	# print "$count\n";
 	for( my $i = 1; $i < $count; $i++){
 		# the next n-1 lines
 		$input = <>;
 		my @temp2 = $input =~ /(-?\d+)/g;
 		push @temp, @temp2;
 	}
-	# foreach(@temp){
-# 		print "$_ ";
-# 	}
-	
 }
 elsif($input =~ m/<READ>\s*(\w+.txt)/){
-	#print $1."\n";
 	open (my $r, '<', $1);
 	$input = <$r>;
 	@temp = $input =~ /(-?\d+)/g;
@@ -53,9 +46,6 @@ for(my $i=0; $i < $count; $i++){
 	}
 }
 my @aind2 = sort { $a <=> $b } @aind;
-	# foreach(@aind2,@bind){
-# 		print "$_ ";
-# 	}
 my $t = shift @bind;
 my $ans = 0;
 for(my $i=0; $i < $count; $i++){
@@ -69,9 +59,6 @@ for(my $i=0; $i < $count; $i++){
 		}
 		$t = shift @bind;
 	}
-	# else{
-	# 	$i = $count;
-	# }
 }
 if($ans == 0){
 	print "There is no Nash Equilibrium. Maybe you have to check the condition and change the model.";
