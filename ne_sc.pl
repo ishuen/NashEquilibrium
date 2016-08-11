@@ -57,6 +57,7 @@ my @aind2 = sort { $a <=> $b } @aind;
 # 		print "$_ ";
 # 	}
 my $t = shift @bind;
+my $ans = 0;
 for(my $i=0; $i < $count; $i++){
 	if(defined $t){
 		if($aind2[$i] > $t){
@@ -64,10 +65,14 @@ for(my $i=0; $i < $count; $i++){
 		}
 		elsif($aind2[$i]+1 == $t){
 			print "($temp[$aind2[$i]],$temp[$t])\n";
+			$ans++;
 		}
 		$t = shift @bind;
 	}
 	# else{
 	# 	$i = $count;
 	# }
+}
+if($ans == 0){
+	print "There is no Nash Equilibrium. Maybe you have to check the condition and change the model.";
 }
