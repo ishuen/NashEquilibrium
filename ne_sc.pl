@@ -61,5 +61,11 @@ for(my $i=0; $i < $count; $i++){
 	}
 }
 if($ans == 0){
-	print "There is no Nash Equilibrium. Maybe you have to check the condition and change the model.";
+	print "There is no Pure Strategy Nash Equilibrium. You have to check the condition and change the model, for example, Mixed Strategy Nash Equilibrium";
+}
+elsif($ans == 1){
+	print "There are $ans point meets Nash Equilibrium.";
+}
+else{
+	print "There are $ans points meet Nash Equilibrium.";
 }
